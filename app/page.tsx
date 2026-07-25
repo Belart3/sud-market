@@ -1,6 +1,34 @@
 import Image from "next/image";
 
 export default function Home() {
+  const categories = [
+    {
+      name: "Home & Decor",
+      image: "/home-and-decor.jpg",
+      items: 3,
+    },
+    {
+      name: "Food",
+      image: "/food-category.jpg",
+      items: 3,
+    },
+    {
+      name: "Clothes", 
+      image: "/clothes-category.jpg",  
+      items: 5,
+    },
+    {
+      name: "Jewelry",
+      image: "/jewelry-category.jpg",
+      items: 4,
+    },
+    {
+      name: "Perfumes",
+      image: "/perfumes-category.jpg",
+      items: 2,
+    },
+  ];
+  
   return (
     <div className="bg-(--background) min-h-screen">
       <header className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-0 max-w-(--max-width) mx-auto">
@@ -98,8 +126,126 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-start md:items-start justify-start py-16 mt-16 px-5 md:px-10 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto bg-(linear-gradient(to bottom, var(--sud-navy-blue) 0%, var(--su-navy-blue-dark) 100%))">
-        
+      <section className="bg-linear-to-b from-(--sud-navy-blue) to-(--sud-navy-blue-dark)">
+        <div className="flex flex-col items-start md:items-start justify-start py-16 mt-16 px-5 md:px-10 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
+          <div className="flex flex-col gap-8 items-center justify-center w-full lg:flex-row lg:items-start lg:justify-between">
+            <div className="flex flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
+              <span className="font-opensans text-[14px]/[21px] font-bold tracking-[1.68px] uppercase text-center text-(--sud-gold-amber) lg:text-start">
+                REAL SUDANESE ENTREPRENEURS
+              </span>
+              <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-center text-white lg:text-start">
+                Meet our vendors
+              </h2>
+            </div>
+            <a href="/vendors" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-gold-amber) capitalize transition-colors duration-300 ease-in-out">
+              become a vendor
+              <Image src="/arrow-right-gold.png" alt="Arrow Right" width={24} height={24} className="inline-block ml-3" />
+            </a>
+          </div>
+          <div className="flex flex-col gap-4 w-full lg:flex-row lg:gap-6 items-center justify-center lg:items-stretch lg:justify-center">
+            <div className="rounded-4xl border border-(--sud-gold-amber-border) bg-[#FFFFFF0D] flex flex-col gap-3 items-center justify-center p-5 lg:flex-1 w-full">
+              <Image src="/nubia-gold.png" alt="Nubia Gold" width={120} height={120} className="rounded-4xl object-cover" />
+              <div className="flex flex-col items-center justify-center gap-3 p-2.5">
+                <h3 className="font-archivo text-[21px]/[25.2px] font-bold text-center text-white tracking-[-0.84px]">
+                  Nubia Gold
+                </h3>
+                <p className="font-opensans text-[16px]/[24px] font-normal text-center text-white">
+                  Khartoum → New York · Jewelry
+                </p>
+              </div>
+            </div>
+            <div className="rounded-4xl border border-(--sud-gold-amber-border) bg-[#FFFFFF0D] flex flex-col gap-3 items-center justify-center p-5 lg:flex-1 w-full">
+              <Image src="/bakhoor-al-nile.png" alt="Bakhoor Al-Nile" width={120} height={120} className="rounded-4xl object-cover" />
+              <div className="flex flex-col items-center justify-center gap-3 p-2.5">
+                <h3 className="font-archivo text-[21px]/[25.2px] font-bold text-center text-white tracking-[-0.84px]">
+                  Bakhoor Al-Nile
+                </h3>
+                <p className="font-opensans text-[16px]/[24px] font-normal text-center text-white">
+                  Omdurman → Cairo · Perfumes & oud
+                </p>
+              </div>
+            </div>
+            <div className="rounded-4xl border border-(--sud-gold-amber-border) bg-[#FFFFFF0D] flex flex-col gap-3 items-center justify-center p-5 lg:flex-1 w-full">
+              <Image src="/sitt-al-shai.png" alt="Sitt Al-Shai" width={120} height={120} className="rounded-4xl object-cover" />
+              <div className="flex flex-col items-center justify-center gap-3 p-2.5">
+                <h3 className="font-archivo text-[21px]/[25.2px] font-bold text-center text-white tracking-[-0.84px]">
+                  Sitt Al-Shai
+                </h3>
+                <p className="font-opensans text-[16px]/[24px] font-normal text-center text-white">
+                  Port Sudan → Virginia · Tea & food
+                </p>
+              </div>
+            </div>
+            <div className="rounded-4xl border border-(--sud-gold-amber-border) bg-[#FFFFFF0D] flex flex-col gap-3 items-center justify-center p-5 lg:flex-1 w-full">
+              <Image src="/beit-al-dar.png" alt="Beit Al-Dar" width={120} height={120} className="rounded-4xl object-cover" />
+              <div className="flex flex-col items-center justify-center gap-3 p-2.5">
+                <h3 className="font-archivo text-[21px]/[25.2px] font-bold text-center text-white tracking-[-0.84px]">
+                  Beit Al-Dar
+                </h3>
+                <p className="font-opensans text-[16px]/[24px] font-normal text-center text-white">
+                  Khartoum → Texas · Home & decor
+                </p>
+              </div>
+            </div>
+            <div className="rounded-4xl border border-(--sud-gold-amber-border) bg-[#FFFFFF0D] flex flex-col gap-3 items-center justify-center p-5 lg:flex-1 w-full">
+              <Image src="/toub-and-thread.png" alt="Toub & Thread" width={120} height={120} className="rounded-4xl object-cover" />
+              <div className="flex flex-col items-center justify-center gap-3 p-2.5">
+                <h3 className="font-archivo text-[21px]/[25.2px] font-bold text-center text-white tracking-[-0.84px]">
+                  Toub & Thread
+                </h3>
+                <p className="font-opensans text-[16px]/[24px] font-normal text-center text-white">
+                  Dubai · Thobes & fabrics
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col items-start md:items-start justify-start pt-16 mt-16 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 max-w-(--max-width) mx-auto">
+        <div className="flex flex-col gap-3 items-start justify-start">
+          <span className="font-opensans text-[14px]/[21px] font-bold tracking-[1.68px] uppercase text-start text-(--sud-gold-amber)">
+            Browse the market
+          </span>
+          <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-start text-(--sud-black)">
+            Shop by category
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 w-full justify-stretch">
+          {
+            categories.map((category, index) => (
+              <div className={`flex flex-col justify-end items-start p-6 rounded-[20px] bg-cover bg-center relative min-h-80
+              ${index === 0 
+                ? 'md:col-span-2 md:row-span-2 md:h-auto'
+                : 'md:col-span-1 md:h-80'             
+              }`} key={index} style={{ backgroundImage: `linear-gradient(to bottom, #00000000, #000000), url('${category.image}')` }}>
+                <h3 className="font-archivo text-[30px]/[36px] font-bold text-start text-white tracking-[-1.2px] capitalize">
+                  {category.name}
+                </h3>
+                <div className="flex items-center justify-between w-full">
+                  <p className="font-opensans text-[16px]/[24px] font-normal text-start text-white">
+                    {category.items} items
+                  </p>
+                  <a href="/" className="font-archivo text-[16px]/[24px] capitalize py-3 px-6 rounded-4xl font-medium text-white border border-white hover:text-(--sud-gold-amber) hover:border-(--sud-gold-amber) transition-colors duration-300 ease-in-out">
+                    shop
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section className="flex flex-col items-start md:items-start justify-start pt-16 px-5 md:px-10 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
+        <div className="flex flex-col items-center justify-center gap-8 w-full">
+          <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-center text-(--sud-black)">
+            Popular right now
+          </h2>
+          <a href="" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-red) capitalize transition-colors duration-300 ease-in-out">
+            view all
+            <Image src="/arrow-right-gold.png" alt="Arrow Right" width={24} height={24} className="inline-block ml-3" />
+          </a>
+        </div>
       </section>
     </div>
   );
