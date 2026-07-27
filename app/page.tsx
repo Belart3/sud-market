@@ -95,7 +95,7 @@ export default function Home() {
   ]
   
   return (
-    <div className="bg-(--background) min-h-screen">
+    <>
       <header className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-0 max-w-(--max-width) mx-auto">
         <div className="flex flex-col gap-6 items-start py-14 px-5 md:px-10 md:w-1/2 lg:p-20">
           <div className="flex items-center justify-start py-2.5 px-6 gap-3 rounded-4xl border border-(--sud-gold-amber-border)">
@@ -418,6 +418,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

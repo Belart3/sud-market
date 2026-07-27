@@ -125,13 +125,15 @@ const NavBar = (props: Props) => {
         >
             <div className='w-full bg-white flex flex-col items-center justify-between border-b border-(--sud-gold-amber-border)'>
                 <div className="flex items-center justify-between w-full lg:gap-10 px-5 py-4 lg:px-20 max-w-(--max-width) mx-auto">
-                    <Image
-                        src="/logo.png"
-                        className="block shrink-0"
-                        alt="SUD Market"
-                        width={104}
-                        height={40}
-                    />
+                    <a href="/">
+                        <Image
+                            src="/logo.png"
+                            className="block shrink-0"
+                            alt="SUD Market"
+                            width={104}
+                            height={40}
+                        />
+                    </a>
 
                     {/* mobile menu */}
                     <div className="flex lg:hidden items-center justify-center gap-6">
@@ -216,7 +218,7 @@ const NavBar = (props: Props) => {
                         </a>
 
                         <a
-                            href="/"
+                            href="/shop"
                             className="text-[16px]/[16px] capitalize text-(--sud-black) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
                             shop

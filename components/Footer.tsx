@@ -4,8 +4,8 @@ type Props = {}
 
 const Footer = (props: Props) => {
     return (
-    <footer className=' flex flex-col gap-10 bg-(--sud-black)'>
-        <div className="px-5 py-10 lg:px-20 w-full max-w-(--max-width) mx-auto">
+    <footer className=' flex flex-col bg-(--sud-black)'>
+        <div className="px-5 py-10 lg:px-20 w-full gap-10 flex flex-col max-w-(--max-width) mx-auto">
             <div className="flex flex-col gap-10 lg:flex-row lg:justify-between">
                 <div className="flex flex-col gap-6 items-start justify-start max-w-[320px]">
                     <Image
