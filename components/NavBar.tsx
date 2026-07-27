@@ -123,8 +123,8 @@ const NavBar = (props: Props) => {
                 }
             `}
         >
-            <div className='w-full bg-white flex flex-col items-center justify-between px-5 py-4 lg:px-20 border-b border-(--sud-gold-amber-border)'>
-                <div className="flex items-center justify-between w-full lg:gap-10 max-w-(--max-width) mx-auto">
+            <div className='w-full bg-white flex flex-col items-center justify-between border-b border-(--sud-gold-amber-border)'>
+                <div className="flex items-center justify-between w-full lg:gap-10 px-5 py-4 lg:px-20 max-w-(--max-width) mx-auto">
                     <Image
                         src="/logo.png"
                         className="block shrink-0"
@@ -205,8 +205,8 @@ const NavBar = (props: Props) => {
                 </div>
             </div>
 
-            <div className="w-full bg-white hidden lg:flex flex-col items-center justify-between px-5 py-4 lg:px-20 border-b border-(--sud-gold-amber-border)">
-                <div className="flex items-center justify-between w-full lg:gap-10 max-w-(--max-width) mx-auto">
+            <div className="w-full bg-white hidden lg:flex flex-col items-center justify-between border-b border-(--sud-gold-amber-border)">
+                <div className="flex items-center justify-between w-full lg:gap-10 max-w-(--max-width)  px-5 py-4 lg:px-20 mx-auto">
                     <div className="flex items-center gap-10 w-full">
                         <a
                             href="/"

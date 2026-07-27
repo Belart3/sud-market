@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { title } from "process";
 
 export default function Home() {
   const categories = [
@@ -28,6 +29,70 @@ export default function Home() {
       items: 2,
     },
   ];
+
+  const popularProducts = [
+    {
+      name: "Gold-Plated Kholkhal Anklet",
+      vendor: "Nubia Gold",
+      image: "/home-and-decor.jpg",
+      price: "75.00",
+    },
+    {
+      name: "Filigree Hoop Earrings",
+      vendor: "Nubia Gold",
+      image: "/home-and-decor.jpg",
+      price: "48.00",
+    },
+    {
+      name: "Oud Muattar Perfume Oil — 12ml",
+      vendor: "Nubia Gold",
+      image: "/home-and-decor.jpg",
+      price: "64.00",
+    },
+  ];  
+
+  const privateLabel = [
+    {
+      name: "Sud Market Gold Bangle Set — 6 pc",
+      image: "/gold-bangle-set.png",
+      price: "42.00",
+    },
+    {
+      name: "Sud Market Signature Dukhan Blend",
+      image: "/home-and-decor.jpg",
+      price: "34.00",
+    },
+    {
+      name: "Sud Market Shai Sudani — Loose Black Tea",
+      image: "/loose-black-tea.png",
+      price: "8.50",
+    },
+    {
+      name: "Sud Market Jebena Coffee — Ground with Ginger",
+      image: "/ground-coffee-with-ginger.png",
+      price: "11.00",
+    },
+  ]
+
+  const features = [
+    {
+      title: "Authentic brands only",
+      info: "Every vendor is Sudanese-owned and vetted"
+    },
+    {
+      title: "Fast U.S. shipping",
+      info: "From our warehouse — 3–5 days"
+    },
+    {
+      title: "Support entrepreneurs",
+      info: "Every purchase backs a small business"
+    },
+    {
+      title: "Everything in one place",
+      info: "No searching ten different stores"
+    },
+
+  ]
   
   return (
     <div className="bg-(--background) min-h-screen">
@@ -236,15 +301,121 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-start md:items-start justify-start pt-16 px-5 md:px-10 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
-        <div className="flex flex-col items-center justify-center gap-8 w-full">
-          <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-center text-(--sud-black)">
+      <section className="flex flex-col items-start md:items-start justify-start mt-16 lg:mt-24 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 max-w-(--max-width) mx-auto">
+        <div className="flex flex-col items-center justify-center gap-8 w-full md:flex-row md:items-center md:justify-between">
+          <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-center text-(--sud-black) oldstyle-nums">
             Popular right now
           </h2>
           <a href="" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-red) capitalize transition-colors duration-300 ease-in-out">
             view all
-            <Image src="/arrow-right-gold.png" alt="Arrow Right" width={24} height={24} className="inline-block ml-3" />
+            <Image src="/arrow-right-red.png" alt="Arrow Right" width={24} height={24} className="inline-block ml-3" />
           </a>
+        </div>
+        <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-3 lg:gap-6 items-stretch justify-stretch">
+          {
+            popularProducts.map((product, index) => (
+              <div key={index} className="flex flex-col gap-3 items-start justify-start p-2.5 rounded-4xl border border-(--sud-gold-amber-border) bg-white w-full">
+                <div className="bg-cover bg-no-repeat bg-center p-3 rounded-3xl flex items-start justify-start h-75 w-full" style={{ backgroundImage: `url(${product.image})` }}></div>
+                <div className="flex flex-col gap-6 py-5 px-2.5 justify-start w-full">
+                  <div className="flex flex-col gap-3 justify-start">
+                    <span className="font-opensans uppercase text-[14px]/[21px] font-bold text-start text-(--sud-gold-amber) tracking-[1.68px]">
+                      {product.vendor}
+                    </span>
+                    <p className="font-opensans text-[16px]/[24px] font-normal text-start text-(--sud-black)">
+                      {product.name}
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-between w-full">
+                    <p className="font-archivo text-[30px]/[36px] font-bold text-start tracking-[-1.2px] text-(--sud-black) proportional-nums">
+                      ${product.price}
+                    </p>
+                    <a href="/" className="font-archivo text-[16px]/[16px] capitalize py-3 px-6 rounded-4xl font-medium text-white bg-(--sud-red) transition-colors duration-300 ease-in-out">
+                      add to cart
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section className="bg-linear-to-b from-(--sud-navy-blue) to-(--sud-navy-blue-dark) mt-16">
+        <div className="flex flex-col items-start md:items-start justify-start py-16 mt-16 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 max-w-(--max-width) mx-auto">
+          <div className="flex flex-col gap-8 items-center justify-center w-full">
+            <div className="flex flex-col items-center justify-center gap-3 lg:max-w-150 lg:gap-6">
+              <div className="flex flex-col items-center justify-center gap-3">
+                <span className="font-opensans text-[14px]/[21px] font-bold tracking-[1.68px] uppercase text-center text-(--sud-gold-amber) lg:text-center">
+                  IN-HOUSE LINE
+                </span>
+                <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-center text-white">
+                  Introducing Sud Market — our private label
+                </h2>
+              </div>
+              <p className="text-[16px]/[24px] text-white text-center font-opensans font-normal">
+                Our own line of everyday Sudanese staples — like the trusted store brand you already know, made to our standard and priced honestly. It’s the one line with real product photography ready today.
+              </p>
+            </div>
+            <a href="/vendors">
+              <button className="bg-(--sud-gold-amber) text-white cursor-pointer font-opensans text-[16px]/[16px] font-medium capitalize py-3 px-6 rounded-4xl transition-colors duration-300 ease-in-out">
+                shop the sud market line
+              </button>
+            </a>
+          </div>
+          <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-4 lg:gap-6 items-stretch justify-stretch">
+            {
+              privateLabel.map((product, index) => (
+                <div key={index} className="flex flex-col items-start justify-start p-2.5 rounded-4xl border border-(--sud-gold-amber-border) bg-[#FFFFFF0D] w-full">
+                  <div className="bg-cover bg-no-repeat bg-center p-3 rounded-3xl flex items-start justify-start h-54 w-full" style={{ backgroundImage: `url(${product.image})` }}></div>     
+                  <div className="flex flex-col gap-3 p-2.5 justify-start w-full">
+                    <p className="font-opensans text-[16px]/[24px] font-normal text-center text-white">
+                      ${product.name}
+                    </p>
+                    <p className="font-archivo tracking-[-1.2px] text-[30px]/[36px] font-bold text-center text-(--sud-gold-amber)">
+                      ${product.price}
+                    </p>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-16 py-16 px-5 md:px-10 lg:px-20 max-w-(--max-width) mx-auto">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {
+            features.map((feature, index) => (
+              <div className="flex flex-col gap-3 p-5 bg-[#B8860B1A] border border-[#B8860B33] rounded-xl" key={index}>
+                <h3 className="font-archivo text-[14px]/[21px] lg:text-[21px]/[25.2px] font-bold tracking-[-0.84px] text-(--sud-black) text-start">
+                  {feature.title}
+                </h3>
+                <p className="font-opensans text-[14px]/[21px] font-normal text-(--sud-black) text-start">
+                {feature.info}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+        <div className="flex flex-col gap-6 rounded-[20px] py-16 px-5 bg-linear-to-b from-(--sud-green) to-(--sud-green-dark) border border-(--sud-gold-amber-border) w-full">
+          <h2 className="text-center text-[48px]/[57.6px] lg:text-[73px]/[73px] font-bold font-archivo text-white">
+            Ready to shop Sudanese?
+          </h2>
+          <p className="text-center text-[16px][24px] font-normal font-opensans text-white sm:max-w-150 sm:mx-auto">
+            Bring the products you love — and the culture you miss — straight to your door.
+          </p>
+          <div className="flex flex-col gap-4 w-full sm:w-full sm:flex-row sm:items-center sm:justify-center">
+            <a href="/">
+              <button className="py-3 px-6 rounded-4xl bg-(--sud-red) flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
+                shop now
+              </button>
+            </a>
+            <a href="/">
+              <button className="py-3 px-6 rounded-4xl bg-transparent border border-white flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
+                become a vendor
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </div>

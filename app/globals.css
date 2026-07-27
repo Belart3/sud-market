@@ -5,6 +5,7 @@
   --background-dark: #F4E9DC;
   --sud-red: #C52F2F;
   --sud-green: #0E6E38;
+  --sud-green-dark: #0A501A;
   --sud-gold-amber: #D6A429;
   --sud-gold-amber-border: #b8860b33;
   --sud-black: #272827;
@@ -13,6 +14,7 @@
   --white: #ffffff;
   --max-width: 1560px;
   --sud-B200: #999999;
+  --sud-B100: #B3B3B3;
 }
 
 @theme inline {
