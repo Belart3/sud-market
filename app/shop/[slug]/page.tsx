@@ -1,6 +1,6 @@
 import ProductCard from '@/components/ProductCard';
 import Image from 'next/image';
-import { products } from '@/app/mockdata/products';
+import { getProducts } from '@/app/lib/products';
 import { notFound } from 'next/navigation';
 import {Button} from '@/components/animate-ui/components/buttons/button'
 
@@ -12,6 +12,7 @@ type Props = {
 
 const page = async ({ params }: Props) => {
     const { slug } = await params;
+    const products = await getProducts()
 
     const product = products.find((product) => product.slug === slug);
 

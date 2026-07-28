@@ -1,10 +1,11 @@
 import Image from "next/image";
 import {Button} from '@/components/animate-ui/components/buttons/button'
-import { products } from '@/app/mockdata/products';
+import { getProducts } from '@/app/lib/products';
 import ProductCard from "@/components/ProductCard";
 import Link from "next/link";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts()
   const categories = [
     {
       name: "Home & Decor",

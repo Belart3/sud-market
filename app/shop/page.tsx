@@ -1,14 +1,15 @@
 import ProductCard from '@/components/ProductCard';
-import { products } from '@/app/mockdata/products';
+import { getProducts } from '@/app/lib/products';
 import React from 'react'
 
 type Props = {}
 
-const page = (props: Props) => {
+const page = async (props: Props) => {
+    const products = await getProducts()
     
     const categories = [...new Set(products.map((item) => item.category))]
     return (
-        <div className='px-5 py-16'>
+        <div className='px-5 py-16 lg:px-20'>
             <div className="flex flex-col gap-6 max-w-(--max-width) mx-auto">
                 <div className="flex flex-col gap-3 items-start justify-start">
                     <h1 className="font-archivo font-bold text-[48px]/[57.6px] capitalize text-(--sud-black)">
