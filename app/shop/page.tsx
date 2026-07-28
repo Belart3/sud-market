@@ -1,107 +1,11 @@
 import ProductCard from '@/components/ProductCard';
+import { products } from '@/app/mockdata/products';
 import React from 'react'
 
 type Props = {}
 
 const page = (props: Props) => {
-    const products = [
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: true,
-            image: "/home-and-decor.jpg",
-            category :"jewelry"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Filigree Hoop Earrings",
-            price: "48.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"perfumes"
-        },
-        {
-            vendor: "BAKHOOR AL-NILE",
-            name: "Filigree Hoop Earrings",
-            price: "64.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"food"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"clothes"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Filigree Hoop Earrings",
-            price: "48.00",
-            privateLabel: true,
-            image: "/home-and-decor.jpg",
-            category :"home-decor"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"sud-market-line"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"jewelry"
-        },
-        {
-            vendor: "BAKHOOR AL-NILE",
-            name: "Filigree Hoop Earrings",
-            price: "64.00",
-            privateLabel: true,
-            image: "/home-and-decor.jpg",
-            category :"perfume"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"food"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"clothes"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"home-decor"
-        },
-        {
-            vendor: "NUBIA GOLD",
-            name: "Gold-Plated Kholkhal Anklet",
-            price: "75.00",
-            privateLabel: false,
-            image: "/home-and-decor.jpg",
-            category :"sud-market-line"
-        },
-    ];
+    
     const categories = [...new Set(products.map((item) => item.category))]
     return (
         <div className='px-5 py-16'>
@@ -129,7 +33,7 @@ const page = (props: Props) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {
                         products.map((product, index) => (
-                            <ProductCard key={index} vendor={product.vendor} image={product.image} name={product.name} price={product.price} privateLabel={product.privateLabel} />
+                            <ProductCard slug={product.slug} key={index} vendor={product.vendor} image={product.image} name={product.name} price={product.price} privateLabel={product.privateLabel} />
                         ))
                     }
                 </div>

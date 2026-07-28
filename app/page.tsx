@@ -1,5 +1,8 @@
 import Image from "next/image";
-import { title } from "process";
+import {Button} from '@/components/animate-ui/components/buttons/button'
+import { products } from '@/app/mockdata/products';
+import ProductCard from "@/components/ProductCard";
+import Link from "next/link";
 
 export default function Home() {
   const categories = [
@@ -29,27 +32,6 @@ export default function Home() {
       items: 2,
     },
   ];
-
-  const popularProducts = [
-    {
-      name: "Gold-Plated Kholkhal Anklet",
-      vendor: "Nubia Gold",
-      image: "/home-and-decor.jpg",
-      price: "75.00",
-    },
-    {
-      name: "Filigree Hoop Earrings",
-      vendor: "Nubia Gold",
-      image: "/home-and-decor.jpg",
-      price: "48.00",
-    },
-    {
-      name: "Oud Muattar Perfume Oil — 12ml",
-      vendor: "Nubia Gold",
-      image: "/home-and-decor.jpg",
-      price: "64.00",
-    },
-  ];  
 
   const privateLabel = [
     {
@@ -96,7 +78,7 @@ export default function Home() {
   
   return (
     <>
-      <header className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-0 max-w-(--max-width) mx-auto">
+      <header className="flex flex-col md:flex-row items-center md:items-stretch justify-center gap-0 max-w-(--max-width) w-full mx-auto">
         <div className="flex flex-col gap-6 items-start py-14 px-5 md:px-10 md:w-1/2 lg:p-20">
           <div className="flex items-center justify-start py-2.5 px-6 gap-3 rounded-4xl border border-(--sud-gold-amber-border)">
             <span className="font-archivo text-(--sud-gold-amber) text-[21px]/[25.2px] leading-6 font-bold tracking-[-0.84px]">
@@ -116,12 +98,14 @@ export default function Home() {
             Jewelry, perfumes, food, clothes and home — all from Sudanese-owned brands we vet by hand, shipped fast from our U.S. warehouse.
           </p>
           <div className="flex gap-4">
-            <button className="bg-(--sud-red) text-white cursor-pointer font-opensans text-[16px]/[24px] capitalize font-bold py-3 px-6 rounded-4xl">
-              Shop Now
-            </button>
-            <button className="border border-(--sud-navy-blue) text-(--sud-navy-blue) cursor-pointer font-opensans text-[16px]/[24px] capitalize font-bold py-3 px-6 rounded-4xl hover:bg-(--sud-navy-blue) hover:text-white ease-in-out duration-300">
+            <Link href='/shop'>
+              <Button className="bg-(--sud-red) hover:bg-(--sud-red) text-white cursor-pointer font-opensans text-[16px]/[24px] capitalize font-bold h-auto py-3 px-6 rounded-4xl">
+                Shop Now
+              </Button>
+            </Link>
+            <Button className="border border-(--sud-navy-blue) text-(--sud-navy-blue) cursor-pointer font-opensans text-[16px]/[24px] capitalize font-bold py-3 px-6 rounded-4xl bg-transparent h-auto hover:bg-(--sud-navy-blue) hover:text-white ease-in-out duration-300">
               become a vendor
-            </button>
+            </Button>
           </div>
         </div>
         <div className="relative w-full h-100 md:h-auto md:w-1/2">
@@ -150,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-start md:items-start justify-start pt-16 px-5 md:px-10 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
+      <section className="flex flex-col items-start md:items-start justify-start py-16 px-5 md:px-10 lg:py-24 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
         <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-(--sud-black) text-start">
           How it works
         </h2>
@@ -192,7 +176,7 @@ export default function Home() {
       </section>
 
       <section className="bg-linear-to-b from-(--sud-navy-blue) to-(--sud-navy-blue-dark)">
-        <div className="flex flex-col items-start md:items-start justify-start py-16 mt-16 px-5 md:px-10 lg:px-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
+        <div className="flex flex-col items-start md:items-start justify-start py-16 px-5 md:px-10 lg:px-20 lg:py-20 gap-8 lg:gap-10 max-w-(--max-width) mx-auto">
           <div className="flex flex-col gap-8 items-center justify-center w-full lg:flex-row lg:items-start lg:justify-between">
             <div className="flex flex-col items-center justify-center gap-3 lg:items-start lg:justify-start">
               <span className="font-opensans text-[14px]/[21px] font-bold tracking-[1.68px] uppercase text-center text-(--sud-gold-amber) lg:text-start">
@@ -267,7 +251,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-start md:items-start justify-start pt-16 mt-16 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 max-w-(--max-width) mx-auto">
+      <section className="flex flex-col items-start md:items-start justify-start pt-16 mt-16 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 w-full max-w-(--max-width) mx-auto">
         <div className="flex flex-col gap-3 items-start justify-start">
           <span className="font-opensans text-[14px]/[21px] font-bold tracking-[1.68px] uppercase text-start text-(--sud-gold-amber)">
             Browse the market
@@ -301,40 +285,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col items-start md:items-start justify-start mt-16 lg:mt-24 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 max-w-(--max-width) mx-auto">
+      <section className="flex flex-col items-start md:items-start justify-start mt-16 lg:mt-24 px-5 md:px-10 lg:px-20 gap-10 lg:gap-10 max-w-(--max-width) w-full mx-auto">
         <div className="flex flex-col items-center justify-center gap-8 w-full md:flex-row md:items-center md:justify-between">
           <h2 className="font-archivo text-[48px]/[57.6px] font-bold text-center text-(--sud-black) oldstyle-nums">
             Popular right now
           </h2>
-          <a href="" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-red) capitalize transition-colors duration-300 ease-in-out">
+          <a href="/shop" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-red) capitalize transition-colors duration-300 ease-in-out">
             view all
             <Image src="/arrow-right-red.png" alt="Arrow Right" width={24} height={24} className="inline-block ml-3" />
           </a>
         </div>
         <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-3 lg:gap-6 items-stretch justify-stretch">
           {
-            popularProducts.map((product, index) => (
-              <div key={index} className="flex flex-col gap-3 items-start justify-start p-2.5 rounded-4xl border border-(--sud-gold-amber-border) bg-white w-full">
-                <div className="bg-cover bg-no-repeat bg-center p-3 rounded-3xl flex items-start justify-start h-75 w-full" style={{ backgroundImage: `url(${product.image})` }}></div>
-                <div className="flex flex-col gap-6 py-5 px-2.5 justify-start w-full">
-                  <div className="flex flex-col gap-3 justify-start">
-                    <span className="font-opensans uppercase text-[14px]/[21px] font-bold text-start text-(--sud-gold-amber) tracking-[1.68px]">
-                      {product.vendor}
-                    </span>
-                    <p className="font-opensans text-[16px]/[24px] font-normal text-start text-(--sud-black)">
-                      {product.name}
-                    </p>
-                  </div>
-                  <div className="flex items-center justify-between w-full">
-                    <p className="font-archivo text-[30px]/[36px] font-bold text-start tracking-[-1.2px] text-(--sud-black) proportional-nums">
-                      ${product.price}
-                    </p>
-                    <a href="/" className="font-archivo text-[16px]/[16px] capitalize py-3 px-6 rounded-4xl font-medium text-white bg-(--sud-red) transition-colors duration-300 ease-in-out">
-                      add to cart
-                    </a>
-                  </div>
-                </div>
-              </div>
+            products.slice(0,3).map((product, index) => (
+              <ProductCard slug={product.slug} key={index} vendor={product.vendor} image={product.image} name={product.name} price={product.price} privateLabel={product.privateLabel}  />
             ))
           }
         </div>
@@ -357,9 +321,9 @@ export default function Home() {
               </p>
             </div>
             <a href="/vendors">
-              <button className="bg-(--sud-gold-amber) text-white cursor-pointer font-opensans text-[16px]/[16px] font-medium capitalize py-3 px-6 rounded-4xl transition-colors duration-300 ease-in-out">
+              <Button className="bg-(--sud-gold-amber) text-white cursor-pointer font-opensans text-[16px]/[16px] font-medium capitalize py-3 px-6 rounded-4xl transition-colors duration-300 ease-in-out">
                 shop the sud market line
-              </button>
+              </Button>
             </a>
           </div>
           <div className="grid grid-cols-1 gap-4 w-full md:grid-cols-4 lg:gap-6 items-stretch justify-stretch">
@@ -406,14 +370,14 @@ export default function Home() {
           </p>
           <div className="flex flex-col gap-4 w-full sm:w-full sm:flex-row sm:items-center sm:justify-center">
             <a href="/">
-              <button className="py-3 px-6 rounded-4xl bg-(--sud-red) flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
+              <Button className="py-3 px-6 h-auto rounded-4xl bg-(--sud-red) hover:bg-(--sud-red) flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
                 shop now
-              </button>
+              </Button>
             </a>
             <a href="/">
-              <button className="py-3 px-6 rounded-4xl bg-transparent border border-white flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
+              <Button className="py-3 px-6 h-auto rounded-4xl bg-transparent hover:bg-transparent border border-white flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
                 become a vendor
-              </button>
+              </Button>
             </a>
           </div>
         </div>

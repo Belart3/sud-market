@@ -1,5 +1,5 @@
 'use client';
-
+import {Button} from '@/components/animate-ui/components/buttons/button'
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { Twirl as Hamburger } from 'hamburger-react';
@@ -190,7 +190,7 @@ const NavBar = (props: Props) => {
                             </a>
 
                             <a href="/" className="cursor-pointer">
-                                <button className="whitespace-nowrap bg-(--sud-red) hover:bg-(--sud-red) transition-colors ease-in-out duration-300 text-white px-6 py-3 flex items-center gap-3 rounded-4xl text-[16px]/[16px] font-medium capitalize font-archivo cursor-pointer">
+                                <Button size='lg' className="whitespace-nowrap bg-(--sud-red) hover:bg-(--sud-red) transition-colors ease-in-out duration-300 text-white px-6! py-3! h-auto flex items-center gap-3 rounded-4xl text-[16px]/[16px] font-medium capitalize font-archivo cursor-pointer">
                                     <Image
                                         src="/cart-white.png"
                                         alt="view cart"
@@ -200,7 +200,7 @@ const NavBar = (props: Props) => {
                                     />
 
                                     Cart · 0
-                                </button>
+                                </Button>
                             </a>
                         </div>
                     </div>

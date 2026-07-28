@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Archivo, Open_Sans } from "next/font/google";
+import { Archivo, Open_Sans, Geist } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${openSans.variable} h-full antialiased`}
+      className={cn("h-full", "antialiased", archivo.variable, openSans.variable, "font-sans", geist.variable)}
     >
       <body className="min-h-full flex flex-col">
         <NavBar />
