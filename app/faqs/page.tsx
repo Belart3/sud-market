@@ -62,11 +62,11 @@ const page = async (props: Props) => {
                                             value={itemValue}
                                             className="bg-white! border-none"
                                         >
-                                            <AccordionTrigger className="text-[16px]/[24px] font-bold text-start font-opensans text-(--sud-black) p-5 bg-white! data-[state=open]:bg-white! cursor-pointer">
+                                            <AccordionTrigger className="text-[16px]/[24px] font-bold text-start font-opensans text-(--sud-black) p-5 lg:p-10 bg-white! data-[state=open]:bg-white! cursor-pointer">
                                                 {item.trigger}
                                             </AccordionTrigger>
 
-                                            <AccordionContent className="text-[16px]/[24px] font-normal text-start font-opensans text-(--sud-black) p-5 bg-white! data-[state=open]:bg-white!">
+                                            <AccordionContent className="text-[16px]/[24px] font-normal text-start font-opensans text-(--sud-black) p-5 lg:p-10 lg:pt-0 bg-white! data-[state=open]:bg-white!">
                                                 {item.content}
                                             </AccordionContent>
                                         </AccordionItem>

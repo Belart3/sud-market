@@ -100,11 +100,11 @@ export default async function Home() {
           </p>
           <div className="flex gap-4">
             <Link href='/shop'>
-              <Button className="bg-(--sud-red) hover:bg-(--sud-red) text-white cursor-pointer font-opensans text-[16px]/[24px] capitalize font-bold h-auto py-3 px-6 rounded-4xl">
+              <Button className="bg-(--sud-red) hover:bg-(--sud-red) text-white cursor-pointer font-opensans text-[16px]/[24px] capitalize font-medium h-auto py-3 px-6 rounded-4xl">
                 Shop Now
               </Button>
             </Link>
-            <Button className="border border-(--sud-navy-blue) text-(--sud-navy-blue) cursor-pointer font-opensans text-[16px]/[24px] capitalize font-bold py-3 px-6 rounded-4xl bg-transparent h-auto hover:bg-(--sud-navy-blue) hover:text-white ease-in-out duration-300">
+            <Button className="border border-(--sud-navy-blue) text-(--sud-navy-blue) cursor-pointer font-opensans text-[16px]/[24px] capitalize font-medium py-3 px-6 rounded-4xl bg-transparent h-auto hover:bg-(--sud-navy-blue) hover:text-white ease-in-out duration-300">
               become a vendor
             </Button>
           </div>

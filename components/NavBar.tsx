@@ -239,7 +239,7 @@ const NavBar = (props: Props) => {
                         </a>
 
                         <a
-                            href="/"
+                            href="/contact"
                             className="text-[16px]/[16px] capitalize text-(--sud-black) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
                             contact

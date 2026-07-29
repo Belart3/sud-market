@@ -49,16 +49,16 @@ const Footer = (props: Props) => {
                         help
                     </span>
                     <div className="flex flex-col gap-4 items-start justify-start">
-                        <a href="" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
+                        <a href="/faqs" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
                             FAQs
                         </a>
-                        <a href="" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
+                        <a href="/shipping-and-returns" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
                             shipping & returns
                         </a>
-                        <a href="" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
+                        <a href="/contact" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
                             contact
                         </a>
-                        <a href="" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
+                        <a href="/legal" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
                             legal
                         </a>
                     </div>

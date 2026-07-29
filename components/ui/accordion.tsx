@@ -2,6 +2,7 @@ import { Accordion as AccordionPrimitive } from "@base-ui/react/accordion"
 
 import { cn } from "@/lib/utils"
 import { ChevronDownIcon, ChevronUpIcon } from "lucide-react"
+import Image from "next/image"
 
 function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
   return (
@@ -39,8 +40,20 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <ChevronDownIcon data-slot="accordion-trigger-icon" className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden" />
-        <ChevronUpIcon data-slot="accordion-trigger-icon" className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline" />
+        <Image data-slot="accordion-trigger-icon"
+          src="/plus.png"
+          className="block pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden"
+          alt="accordion icon"
+          width={24}
+          height={24}
+        />
+        <Image data-slot="accordion-trigger-icon"
+          src="/minus.png"
+          className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
+          alt="accordion icon"
+          width={24}
+          height={24}
+        />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   )
