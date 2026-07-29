@@ -53,10 +53,8 @@ const page = async (props: Props) => {
                                 return (
                                     <Accordion
                                         key={item.id}
-                                        type="single"
-                                        collapsible
                                         defaultValue={
-                                            isInitiallyOpen ? itemValue : undefined
+                                            isInitiallyOpen ? [itemValue] : undefined
                                         }
                                         className="rounded-[20px] border border-(--sud-gold-amber-border) w-full! bg-white! overflow-hidden"
                                     >
