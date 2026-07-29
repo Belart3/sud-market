@@ -58,7 +58,7 @@ const page = () => {
 
             <div className="flex flex-col gap-5 md:col-start-1 md:row-start-2">
                 <div className="flex gap-3 w-full items-center justify-start">
-                    <div className="flex items-center justify-center p-3.5 rounded-[12px] bg-(--sud-gold-amber-border)">
+                    <div className="flex items-center justify-center p-3.5 rounded-[12px] shrink-0 bg-(--sud-gold-amber-border)">
                         <Image
                             src="/mail.png"
                             className="block shrink-0"
