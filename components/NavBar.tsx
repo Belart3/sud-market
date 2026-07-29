@@ -271,33 +271,33 @@ const NavBar = (props: Props) => {
                 }`}
             >
                 <div className="flex items-center justify-between w-full lg:gap-10 max-w-(--max-width) mx-auto">
-                    <div className="flex flex-col items-start gap-4 w-full">
+                    <div className="flex flex-col items-start gap-5 w-full">
                         <a
-                            href="/"
+                            href="/shop"
                             className="text-[16px]/[16px] capitalize text-(--sud-black) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
-                            Jewelry
+                            shop
                         </a>
 
                         <a
-                            href="/"
+                            href="/faqs"
                             className="text-[16px]/[16px] capitalize text-(--sud-black) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
-                            Perfumes
+                            FAQs
                         </a>
 
                         <a
-                            href="/"
+                            href="/shipping-and-returns"
                             className="text-[16px]/[16px] capitalize text-(--sud-black) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
-                            Food
+                            shipping & returns
                         </a>
 
                         <a
-                            href="/"
+                            href="/contact"
                             className="text-[16px]/[16px] capitalize text-(--sud-black) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
-                            Thobes
+                            contact
                         </a>
                     </div>
                 </div>
