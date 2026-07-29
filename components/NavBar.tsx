@@ -112,7 +112,7 @@ const NavBar = (props: Props) => {
         <nav
             className={`
                 inset-x-0 top-0 z-50 w-full
-                transform-gpu
+                transform-gpu bg-white
                 transition-transform duration-500
                 ease-[cubic-bezier(0.22,1,0.36,1)]
                 motion-reduce:transition-none
