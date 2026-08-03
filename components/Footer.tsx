@@ -68,7 +68,7 @@ const Footer = (props: Props) => {
                         vendors
                     </span>
                     <div className="flex flex-col gap-4 items-start justify-start">
-                        <a href="" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
+                        <a href="/become-a-vendor" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">
                             become a vendor
                         </a>
                         <a href="" className="text-(--sud-B100) font-opensans text-[16px]/[24px] font-bold capitalize">

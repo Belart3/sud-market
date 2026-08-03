@@ -248,7 +248,7 @@ const NavBar = (props: Props) => {
 
                     <div className="flex items-center gap-4 shrink-0">
                         <a
-                            href="/"
+                            href="/become-a-vendor"
                             className="text-[16px]/[16px] capitalize text-(--sud-green) hover:text-(--sud-red) font-medium transition-colors ease-in-out duration-300 font-archivo"
                         >
                             become a vendor

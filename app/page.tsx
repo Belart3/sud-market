@@ -104,9 +104,11 @@ export default async function Home() {
                 Shop Now
               </Button>
             </Link>
-            <Button className="border border-(--sud-navy-blue) text-(--sud-navy-blue) cursor-pointer font-opensans text-[16px]/[24px] capitalize font-medium py-3 px-6 rounded-4xl bg-transparent h-auto hover:bg-(--sud-navy-blue) hover:text-white ease-in-out duration-300">
-              become a vendor
-            </Button>
+            <Link href='/become-a-vendor'>
+              <Button className="border border-(--sud-navy-blue) text-(--sud-navy-blue) cursor-pointer font-opensans text-[16px]/[24px] capitalize font-medium py-3 px-6 rounded-4xl bg-transparent h-auto hover:bg-(--sud-navy-blue) hover:text-white ease-in-out duration-300">
+                become a vendor
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="relative w-full h-100 md:h-auto md:w-1/2">
@@ -187,7 +189,7 @@ export default async function Home() {
                 Meet our vendors
               </h2>
             </div>
-            <a href="/vendors" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-gold-amber) capitalize transition-colors duration-300 ease-in-out">
+            <a href="/become-a-vendor" className="font-opensans text-[16px]/[24px] font-bold text-(--sud-gold-amber) capitalize transition-colors duration-300 ease-in-out">
               become a vendor
               <Image src="/arrow-right-gold.png" alt="Arrow Right" width={24} height={24} className="inline-block ml-3" />
             </a>
@@ -375,7 +377,7 @@ export default async function Home() {
                 shop now
               </Button>
             </a>
-            <a href="/">
+            <a href="/become-a-vendor">
               <Button className="py-3 px-6 h-auto rounded-4xl bg-transparent hover:bg-transparent border border-white flex items-center justify-center w-full text-[16px]/[16px] capitalize text-white font-medium cursor-pointer">
                 become a vendor
               </Button>
